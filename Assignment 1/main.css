@@ -7,6 +7,9 @@ a, a:visited {
 	font-weight:bold;
 	text-decoration:none;
 }
+#sublink {
+	padding-left:2em;
+}
 body {
  font-family: Arial, Helvetica, sans-serif;
  font-size: 16px;
@@ -24,14 +27,14 @@ body {
  border: 1px solid #ccc;
  height: 80px;
  margin: 10px 0px 5px 0px;
- background: #103E50;
+ background: #222930;
 }
 #leftcolumn {
  font-size: large;
  font-weight: bold; 
  color: #333;
  border: 1px solid #ccc;
- background: #4C849A;
+ background: #8D9C99;
  margin: 0px 5px 5px 0px;
  padding: 10px;
  height: auto;
@@ -41,7 +44,7 @@ body {
 #rightcolumn { 
  color: #333;
  border: 1px solid #ccc;
- background: #7CABBD;
+ background: #E9E9E9;
  margin: 0px 0px 5px 0px;
  padding: 10px;
  height: auto;
@@ -55,7 +58,7 @@ body {
  clear: both;
  color: #FFFFFF;
  border: 1px solid #ccc;
- background: #103E50;
+ background: #222930;
  margin: 0px 0px 10px 0px;
  padding: 10px;
 }
