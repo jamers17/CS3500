@@ -11,7 +11,7 @@
 
    <!-- Begin Wrapper -->
    <div id="wrapper">
-   
+
          <!-- Begin Header -->
          <div id="header">
             <div id = "lefthead">
@@ -36,10 +36,10 @@
                      <li><a href="../setup/references.html">References</a></li>
                   </ul>
                </li>
-               <li><a href="./main.html">Unix Environment</a>
+               <li><a href="../unix/main.html">Unix Environment</a>
                   <ul>
-                     <li><a href="./references.html">References</a></li>
-                     <li><a href="./commands.html">Basic Commands</a></li>
+                     <li><a href="../unix/references.html">References</a></li>
+                     <li><a href="../unix/commands.html">Basic Commands</a></li>
                   </ul>
                </li>
                <li><a href="../ubuntu/main.html">Ubuntu</a>
@@ -62,7 +62,7 @@
                </li>
                <li><a href="">Web Server</a>
                   <ul>
-                     <li><a href="../ws/log.html">Activity Log</a></li>
+                     <li><a href="./log.html">Activity Log</a></li>
                   </ul>
                </li>
             </ul>
@@ -72,40 +72,12 @@
          
          <!-- Begin Content -->
          <div id="content">
-               
-               <h1>Basic Commands</h1>
+
+         <h1>Web Server Activity Log</h1>
                <br>
-               <p>There are a lot of Unix commands that are useful and powerful, but for essential file manipulation, there are a few necessary commands that we'll initially require:</p><br>
-               <ul>
-                  <li><b>pwd</b>: this is the command to output to the terminal your current working directory.
-                  <br><br>
-                  <div id="code">
-                  <b>...:$ pwd<br>
-                  /home/james<br>
-                  ...:$ <br><br></b>
-                  The absolute path to the current working directory is displayed on the next line.
-                  </div></li><br>
-                  <li><b>cd</b> <i>path</i>: where <b>cd</b> is the command for changing directories, and <i>path</i> is either the absolute or relative path of the intended directory.
-                  <br><br>
-                  <div id="code">
-                  <b>...:$ cd <i>CS3500</i><br>
-                  ...:/CS3500$ <br><br></b>
-                  CS3500 is a folder directly below the current working directory. This is called a relative path.<br><br>
-                  <b>...$: cd <i>/home/james/Dropbox/CS3500</i><br>
-                  ...:/CS3500$ <br><br></b>
-                  This is an absolute path to the same folder. Supplying an absolute path allows the user to cd to any specified directory in the system, provided the user has the appropriate privileges.
-                  </div></li><br>
-                  <li><b>ls</b> <i>-l</i>: the <b>ls</b> command lists the files and sub-directories in the current working directory. There are a number of <b>tags</b> which can be supplied as arguments to <b>ls</b> which change the output. For example, <b>ls -l</b> lists the files in a longer form with permissions displayed. 
-                  <br><br>
-                  <div id="code">
-                  <b>...:$ ls<br>
-                  james  lost+found<br>
-                  ...:$ ls -l<br>
-                  drwxr-xr-x 40 james james  4096 Feb 15 10:56 james<br>
-                  drwx------  2  root root  16384 Sep  5 21:02 lost+found<br><br></b>
-                  The long argument gives much more information about the files or directories. 
-                  </div></li><br>
-         
+               <p>This is a log of administration activity of our web server.</p>
+               <br>
+               <iframe width="895px" height="250px" src="https://docs.google.com/document/d/1WIOCcUmFc3_QSma1zejun_Tl9X4XxhK2zdxJv0rlaS8/pub?embedded=true"></iframe>         
          
          </div>
          <!-- End Right Column -->

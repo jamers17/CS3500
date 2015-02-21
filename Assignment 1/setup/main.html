@@ -31,15 +31,15 @@
             <ul id="dropdown">
                <li><a href="../index.html">CS 3500</a>
                </li>
-               <li><a href="../setup/main.html">Setup</a>
-                  <ul>
-                     <li><a href="../setup/references.html">References</a></li>
-                  </ul>
-               </li>
-               <li><a href="./main.html">Unix Environment</a>
+               <li><a href="./main.html">Setup</a>
                   <ul>
                      <li><a href="./references.html">References</a></li>
-                     <li><a href="./commands.html">Basic Commands</a></li>
+                  </ul>
+               </li>
+               <li><a href="../unix/main.html">Unix Environment</a>
+                  <ul>
+                     <li><a href="../unix/references.html">References</a></li>
+                     <li><a href="../unix/commands.html">Basic Commands</a></li>
                   </ul>
                </li>
                <li><a href="../ubuntu/main.html">Ubuntu</a>
@@ -73,38 +73,19 @@
          <!-- Begin Content -->
          <div id="content">
                
-               <h1>Basic Commands</h1>
+               <h1>Installation & Setup Guide</h1>
                <br>
-               <p>There are a lot of Unix commands that are useful and powerful, but for essential file manipulation, there are a few necessary commands that we'll initially require:</p><br>
-               <ul>
-                  <li><b>pwd</b>: this is the command to output to the terminal your current working directory.
-                  <br><br>
-                  <div id="code">
-                  <b>...:$ pwd<br>
-                  /home/james<br>
-                  ...:$ <br><br></b>
-                  The absolute path to the current working directory is displayed on the next line.
-                  </div></li><br>
-                  <li><b>cd</b> <i>path</i>: where <b>cd</b> is the command for changing directories, and <i>path</i> is either the absolute or relative path of the intended directory.
-                  <br><br>
-                  <div id="code">
-                  <b>...:$ cd <i>CS3500</i><br>
-                  ...:/CS3500$ <br><br></b>
-                  CS3500 is a folder directly below the current working directory. This is called a relative path.<br><br>
-                  <b>...$: cd <i>/home/james/Dropbox/CS3500</i><br>
-                  ...:/CS3500$ <br><br></b>
-                  This is an absolute path to the same folder. Supplying an absolute path allows the user to cd to any specified directory in the system, provided the user has the appropriate privileges.
-                  </div></li><br>
-                  <li><b>ls</b> <i>-l</i>: the <b>ls</b> command lists the files and sub-directories in the current working directory. There are a number of <b>tags</b> which can be supplied as arguments to <b>ls</b> which change the output. For example, <b>ls -l</b> lists the files in a longer form with permissions displayed. 
-                  <br><br>
-                  <div id="code">
-                  <b>...:$ ls<br>
-                  james  lost+found<br>
-                  ...:$ ls -l<br>
-                  drwxr-xr-x 40 james james  4096 Feb 15 10:56 james<br>
-                  drwx------  2  root root  16384 Sep  5 21:02 lost+found<br><br></b>
-                  The long argument gives much more information about the files or directories. 
-                  </div></li><br>
+               <p>Below is an installation guide that has been adapted primarily from the <a href="https://blog.cs.wmich.edu/">WMU CS guide</a>. For a full list of references, please see the <a href="./references.html">references</a> page.</p><br>
+
+               <iframe width="895px" height="500px" src="https://docs.google.com/document/d/1fDHWvdbA2KZ_K3c63ddFJCOFWBgso6fFFCH3eSbpurI/pub?embedded=true"></iframe>
+
+               <br><br>
+               <p>The following is a list of annotations and corrections to the original WMU CS guide.
+               </p>
+               <br>
+
+               <iframe width="895px" height="250px" src="https://docs.google.com/document/d/1qJSLAb-GW6KraOBHp1N2tRRJzqPgb7IQqc1xIlmxxGw/pub?embedded=true"></iframe>
+
          
          
          </div>

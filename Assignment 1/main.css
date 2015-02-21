@@ -1,3 +1,5 @@
+/*Dropdown menu taken from http://cssdeck.com/labs/another-simple-css3-dropdown-menu*/
+
 * { padding: 0; margin: 0; }
 
 html { overflow-y: scroll; }
@@ -7,17 +9,21 @@ a, a:visited {
 	font-weight:bold;
 	text-decoration:none;
 }
+
 #sublink {
 	padding-left:2em;
 }
+
 body {
  font-family: Arial, Helvetica, sans-serif;
  font-size: 16px;
 }
+
 #wrapper { 
  margin: 0 auto;
  width: 922px;
 }
+
 #header {
  font-size: xx-large;
  color: #FFFFFF;
@@ -29,7 +35,14 @@ body {
  margin: 10px 0px 5px 0px;
  background: #222930;
 }
-#leftcolumn {
+#lefthead {
+	float: left;
+}
+#righthead {
+	float: right;
+}
+
+#menu {
  font-size: large;
  font-weight: bold; 
  color: #333;
@@ -38,37 +51,137 @@ body {
  margin: 0px 5px 5px 0px;
  padding: 10px;
  height: auto;
- width: 225px;
- float: left;
-}
-#rightcolumn { 
- color: #333;
- border: 1px solid #ccc;
- background: #E9E9E9;
- margin: 0px 0px 5px 0px;
- padding: 10px;
- height: auto;
- width: 648px;
- overflow: hidden;
- display: inline;
- float: left;
-}
-#footer { 
  width: 900px;
- clear: both;
- color: #FFFFFF;
- border: 1px solid #ccc;
- background: #222930;
- margin: 0px 0px 10px 0px;
- padding: 10px;
+ float: left;
 }
+#dropdown {
+	text-align: left;
+	display: inline;
+	margin: 0;
+	padding: 15px 4px 17px 0;
+	list-style: none;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+#dropdown a, a:visited {
+	color: #333;
+	font: bold 12px/18px sans-serif;
+	text-decoration: none;
+	display: inline-block;
+}
+#dropdown li {
+	font: bold 12px/18px sans-serif;
+	display: inline-block;
+	margin-right: -4px;
+	position: relative;
+	/*padding: 15px 20px;*/
+	background: #fff;
+  	cursor: pointer;
+  	-webkit-transition: all 0.2s;
+  	-moz-transition: all 0.2s;
+  	-ms-transition: all 0.2s;
+  	-o-transition: all 0.2s;
+  	transition: all 0.2s;
+}
+#dropdown li a, a:visited {
+	color: #333;
+	font: bold 12px/18px sans-serif;
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 20px;
+}
+#dropdown li:hover {
+  	background: #222930;
+  	color: #fff;
+}
+#dropdown li:hover a, a:visited {
+	color: #fff;
+	font: bold 12px/18px sans-serif;
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 20px;
+}
+#dropdown li ul {
+  	padding: 0;
+  	position: absolute;
+  	top: 48px;
+  	left: -36px;
+  	width: 150px;
+  	-webkit-box-shadow: none;
+  	-moz-box-shadow: none;
+  	box-shadow: none;
+  	display: none;
+  	opacity: 0;
+  	visibility: hidden;
+  	-webkit-transiton: opacity 0.2s;
+  	-moz-transition: opacity 0.2s;
+  	-ms-transition: opacity 0.2s;
+  	-o-transition: opacity 0.2s;
+  	-transition: opacity 0.2s;
+}
+#dropdown li ul li { 
+  	background: #222930; 
+  	display: block; 
+  	color: #fff;
+  	text-shadow: 0 -1px 0 #000;
+}
+#dropdown li ul li a, a:visited {
+	color: #fff;
+	font: bold 12px/18px sans-serif;
+	text-decoration: none;
+	display: inline-block;
+}
+#dropdown li ul li:hover { 
+	background: #37434e; 
+}
+#dropdown li ul li:hover a, a:visited {
+	color: #fff;
+	font: bold 12px/18px sans-serif;
+	text-decoration: none;
+	display: inline-block;
+}
+#dropdown li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+#content { 
+ 	color: #000;
+ 	border: 1px solid #ccc;
+ 	background: #E9E9E9;
+ 	margin: 0px 0px 5px 0px;
+ 	padding: 10px;
+ 	height: auto;
+ 	width: 900px;
+ 	overflow: hidden;
+ 	display: inline;
+ 	float: left;
+}
+#content a, a:visited {
+	color:#0F0F83;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#footer { 
+ 	width: 900px;
+ 	clear: both;
+ 	color: #FFFFFF;
+ 	border: 1px solid #ccc;
+ 	background: #222930;
+ 	margin: 0px 0px 10px 0px;
+ 	padding: 10px;
+}
+
 #code {
- background: #F8F8FF;
- border: black dashed 1px;
- padding: 6px;
- margin: 0em 3em 0em 3em;
- font-size: small;
- font-weight: bold;
+	background: #F8F8FF;
+	border: black dashed 1px;
+	padding: 6px;
+	margin: 0em 3em 0em 3em;
+	font-family: Monaco, monofur, monospace;
+	font-size: small;
 }
 
 ul, ol {
