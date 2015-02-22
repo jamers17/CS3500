@@ -12,42 +12,76 @@
    <!-- Begin Wrapper -->
    <div id="wrapper">
    
-         <!-- Begin Header -->
+        <!-- Begin Header -->
          <div id="header">
-         
-               CS 3500 
-               <br>Web Technologies
+            <div id = "lefthead">
+               CS 3500: Web Technologies
+               <br>Team Koala
+            </div>
+            <div id = "righthead">
+               <img height="75px" width="75px" src="../images/koala2.png" alt="This is a koala.">
+            </div>
                
          </div>
          <!-- End Header -->
-         <!-- Begin Left Column -->
-         
-         <div id="leftcolumn">
-         
-               <A HREF="../index.html">Home</A><br><br>
-               <A HREF="../unix/main.html">Unix</A><br>
-               <A HREF="../unix/references.html" id="sublink">References</A><br>
-               <A HREF="../unix/commands.html" id="sublink">Commands</A><br><br>
-               <A HREF="../html/main.html">HTML5</A><br>
-               <A HREF="../html/references.html" id="sublink">References</A><br>
-               <A HREF="../html/overview.html" id="sublink">Overview</A><br><br>
-               <A HREF="../css/main.html">CSS3</A><img height="15px" width="15px" src="../images/left.png" style="padding-left:1em"></img><br>
-               <A HREF="../css/references.html" id="sublink">References</A><br>
-               <A HREF="../css/overview.html" id="sublink">Overview</A><br><br>
-               <A HREF="../javascript/main.html">JavaScript</A><br>
-               <A HREF="../javascript/references.html" id="sublink">References</A><br>
-               <A HREF="../javascript/overview.html" id="sublink">Overview</A><br>
-               <A HREF="../javascript/examples.html" id="sublink">Examples</A><br>
+
+          <!-- Begin Menu -->
+         <div id="menu">
+
+            <ul id="dropdown">
+               <li><a href="../index.html">CS 3500</a>
+               </li>
+               <li><a href="../setup/main.html">Setup</a>
+                  <ul>
+                     <li><a href="../setup/references.html">References</a></li>
+                  </ul>
+               </li>
+               <li><a href="../unix/main.html">Unix Environment</a>
+                  <ul>
+                     <li><a href="../unix/references.html">References</a></li>
+                     <li><a href="../unix/commands.html">Basic Commands</a></li>
+                  </ul>
+               </li>
+               <li><a href="./main.html">Ubuntu</a>
+                  <ul>
+                     <li><a href="./references.html">References</a></li>
+                     <li><a href="./security.html">Security</a></li>
+                  </ul>
+               </li>
+               <li><a href="../apache/main.html">Apache</a>
+                  <ul>
+                     <li><a href="../apache/references.html">References</a></li>
+                     <li><a href="../apache/security.html">Security</a></li>
+                  </ul>
+               </li>
+               <li><a href="../ror/main.html">Ruby on Rails</a>
+                  <ul>
+                     <li><a href="../ror/references.html">References</a></li>
+                     <li><a href="../ror/security.html">Security</a></li>
+                  </ul>
+               </li>
+               <li><a href="">Web Server</a>
+                  <ul>
+                     <li><a href="../ws/log.html">Activity Log</a></li>
+                  </ul>
+               </li>
+            </ul>
 
          </div>
-         <!-- End Left Column -->
+         <!-- End Menu -->
          
-         <!-- Begin Right Column -->
-         <div id="rightcolumn">
+         <!-- Begin Content -->
+         <div id="content">
                
-               <h1></h1>
+               <h1>Ubuntu Server</h1>
                <br>
-               <p></p>
+               <p>The server we are using in this course is Ubuntu. Specifically, it is:</p><br>
+               <div id="code"> 
+               Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-45-generic x86_64)
+               </div><br>
+               <p>As is obvious from the above welcome prompt when logging in, Ubuntu is a GNU/Linux based server. As such, it is free, and available directly from <a href="http://www.ubuntu.com/download/server">Ubuntu</a>. The current version with a long view is 14.04.2. Note, however, that while many new servers are likely to benefit from running that version, it may not necessarily be advantageous for older installations to upgrade, as certain aspects of the server may not like the upgrade.
+               <br><br>
+               For more information, take a look at some of the breakdowns and specifications <a href="http://www.ubuntu.com/server">here</a>.</p>
 
          
          
