@@ -54,7 +54,7 @@
                      <li><a href="../apache/security.html">Security</a></li>
                   </ul>
                </li>
-               <li><a href="../ror/main.html">Ruby on Rails</a>
+               <li><a href="../ror/main.html">Rails</a>
                   <ul>
                      <li><a href="../ror/references.html">References</a></li>
                      <li><a href="../ror/security.html">Security</a></li>
@@ -75,10 +75,52 @@
                
                <h1>Ubuntu Server Security</h1>
                <br>
-               <p></p>
+               <p>The following are some measures which can (and should) be implemented to increase the security of an Ubuntu server.</p>
+               <br>
+               <ul>
+                  <li><b>Don't use root day to day.</b> The root user account has very broad privileges, and mistakes or misuse of that account can have wide reaching consequences for your server. Instead, create a new administrator account with sudo privileges for day to day use.<br>
+                  In order to set up a new user account for 'demo' with sudo privileges, do the following:<br><br>
+                  <div id="code">
+                  <b>$: adduser demo</b><br>
+                  <i>(follow prompts for user field information)</i><br>
+                  <b>$: gpasswd -a demo sudo</b>
+                  </div></li><br>
 
-         
-         
+                  <li><b>Use Public Key Authentication.</b> This is more secure than simple password protection. To do this, first <b>generate a key pair</b>:<br><br>
+                  <div id="code">
+                  <b>$: ssh-keygen</b><br>
+                  Generating public/private rsa key pair.<br>
+                  Enter file in which to save the key (/Users/localuser/.ssh/id_rsa):
+                  </div>
+                  <br>
+                  This generates a private key, id_rsa, and a public key, id_rsa.pub, in the .ssh directory of the localuser's home directory. Next, <b>copy the public key</b> to the server. Login to the server, and you will be in your user home directory.<br><br>
+                  <div id="code">
+                  <b>$: mkdir .ssh</b><br>
+                  <i>(This creates the appropriate directory.)</i><br>
+                  <b>$: chmod 700 .ssh</b><br>
+                  <i>(This sets the appropriate privileges so that only the current user can access this file.)</i><br>
+                  <b>$: nano .ssh/authorized_keys</b><br>
+                  <i>(This command creates and opens this file in nano, a text editor.)</i><br>
+                  Paste the public key generated on your local machine in step one, then close and save the file.<br>
+                  <b>$: chmod 600 .ssh/authorized_keys</b><br>
+                  <i>(This sets permissions on the file.)</i>
+                  </div>
+                  </li><br>
+
+                  <li><b>Configure SSH.</b> SSH is the program that allows remote connections. By modifying its configuration file, we can increase server security.<br><br>
+                  <div id="code">
+                  <b>$: nano /etc/ssh/sshd_config</b><br>
+                  <i>(Opens the configuration file.)</i><br>
+                  Change "PermitRootLogin yes" to "no". This disables logging in remotely as root over SSH. Since we can escalate our user privileges when necessary, remotely logging in as the root user is no longer necessary.<br>
+                  Save and close the file.<br>
+                  <b>$: service ssh restart</b><br>
+                  <i>(This command is necessary to load the changes we've made.)</i><br>
+                  </div>
+                  </li><br>
+
+                  <li><b>Configure a basic firewall.</b> Firewalls prevent connections to ports that aren't explicitly allowed to remain open. Leaving the possibility for ports to be opened that you have no legitimate use for is a critical security vulnerability. <b>ufw</b> is a firewall program that ships with Ubuntu.</li>
+               </ul>
+
          </div>
          <!-- End Right Column -->
          
