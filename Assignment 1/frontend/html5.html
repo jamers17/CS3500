@@ -35,8 +35,8 @@
                   <ul>
                      <li><a href="./references.html">References</a></li>
                      <li><a href="./html5.html">HTML5</a></li>
-                     <li><a href="./html5.html">CSS3</a></li>
-                     <li><a href="./html5.html">JavaScript</a></li>
+                     <li><a href="./css3.html">CSS3</a></li>
+                     <li><a href="./javascript.html">JavaScript</a></li>
                   </ul>
                </li>
                <li><a href="../unix/main.html">Unix Environment</a>
@@ -63,7 +63,7 @@
                      <li><a href="../ror/security.html">Security</a></li>
                   </ul>
                </li>
-               <li><a href="">Web Server</a>
+               <li><a href="http://vps.cs.wmich.edu:63680">Web Server</a>
                   <ul>
                   	 <li><a href="../ws/setup.html">Setup & Installation</a></li>
                      <li><a href="../ws/log.html">Activity Log</a></li>
@@ -76,9 +76,40 @@
          
          <!-- Begin Content -->
          <div id="content">
-               
-
+      
+         <h1>HTML5</h1>
+         <br>
+         <p>The main language of the world wide web, the hypertext markup language, or HTML, is currenty in its 5th version. Its standards are maintained by W3 <a href="http://www.w3.org/TR/html5/">here</a>.</p>
+         <br>
+         <h2>Tools & Editors</h2>
+         <br>
+         <p>There are a number of useful tools for HTML5. Perhaps the most useful is the <a href="http://validator.w3.org">official validator</a> for HTML, which will detect any usages of the language which are not officially supported. Verifying the integrity of HTML code helps to facilitate greater compatibility of your front end design with different browsers and versions.</p><br>
+         <p>Additionally, there are a number of editors that work well for HTML. They range in features and complexity from simple text programs like <a href="http://en.wikipedia.org/wiki/Notepad_%28software%29">notepad</a>, simple programming editors like <a href="https://wiki.gnome.org/Apps/Gedit">gedit</a>, to higher end programming plaforms like <a href="http://notepad-plus-plus.org/">Notepad++</a> and <a href="http://www.sublimetext.com/">Sublime Text</a>, to full blown IDEs (integrated development environment) like <a href="https://netbeans.org/">Netbeans</a>.</p>
+         <br>
+         <h2>Syntax & Examples</h2>
+         <br>
+         <p>HTML uses tags, typically including a start and end tag that enclose content of a specific type dictated by the tag. This content could be a paragraph, a picture, a link, or even some JavaScript code. For example, here is the simple paragraph tag for text formatting:</p>
+         <br>
+         <div id="code">
+         <b>&lt;p&gt;</b>This is a paragraph in HTML.<b>&lt;/p&gt;</b>
          </div>
+         <br>
+         <p>Notice the closing tag at the end. This tells the web browser that what follows is not a part of this paragraph. This is the result:</p>
+         <br>
+         <p>This is a paragraph in HTML.</p>
+         <br>
+         <p>...and the following is the HTML code for displaying an image:</p>
+         <br>
+         <div id="code">
+         <b>&lt;img src=&quot;../images/Koala.png&quot; alt=&quot;a koala&quot;&gt;</b>
+         </div>
+         <br>
+         <p>Notice that the entire line, including the URL of the image is part of that tag. The 'alt' or alternative text is provided for browsers that cannot load the image for any reason. Image tags are one of the few tags that do not need a closing tag. This is what that code looks like when interpreted by your web browser:</p>
+         <br>
+         <img src="../images/Koala.png" alt="a koala" style="margin-left: 5em">
+         <br><br>
+         <p>That is one angry koala! For more examples and to learn how to do more with koala images on your own web site, work through some of the guides linked on our <a href="./references.html">references</a> page!</p>
+         <br>
          <!-- End Right Column -->
          
          <!-- Begin Footer -->

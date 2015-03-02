@@ -4,7 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>CS 3500 Web Technologies</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
 
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
 </head>
 
 <body>
@@ -35,8 +49,8 @@
                   <ul>
                      <li><a href="./references.html">References</a></li>
                      <li><a href="./html5.html">HTML5</a></li>
-                     <li><a href="./html5.html">CSS3</a></li>
-                     <li><a href="./html5.html">JavaScript</a></li>
+                     <li><a href="./css3.html">CSS3</a></li>
+                     <li><a href="./javascript.html">JavaScript</a></li>
                   </ul>
                </li>
                <li><a href="../unix/main.html">Unix Environment</a>
@@ -63,7 +77,7 @@
                      <li><a href="../ror/security.html">Security</a></li>
                   </ul>
                </li>
-               <li><a href="">Web Server</a>
+               <li><a href="http://vps.cs.wmich.edu:63680">Web Server</a>
                   <ul>
                   	 <li><a href="../ws/setup.html">Setup & Installation</a></li>
                      <li><a href="../ws/log.html">Activity Log</a></li>
@@ -76,9 +90,49 @@
          
          <!-- Begin Content -->
          <div id="content">
-               
-
+         
+         <h1>JavaScript</h1>
+         <br>
+         <p>JavaScript is a formalized scripting language in the <a href="http://www.ecma-international.org/ecma-262/5.1/">Ecma Standard</a> (<i>Standard ECMA-262, Edition 5.1</i>), which is based upon several scripting languages including JavaScript. ECMAScript itself was designed to be a web scripting language. It is multi-paradigm, supporting object-oriented programming styles as well as imperative and functional.</p>
+         <br>
+         <p>It is primarily used as a part of web browsers, which allow for client-side scripts to interact with the user, control the browser, communicate asynchronously and alter the document content that is displayed. In addition to these front end applications, it can also be used in server-side network programming with runtime environments, making it a useful tool for back end development as well.</p>
+         <br>
+         <h2>Syntax & Examples</h2>
+         <br>
+         <p>JavaScript allows developers to mainupulate the document content in ways that simple HTML and CSS eiher cannot do easily, or at all. For example, a simple drag and drop function in JavaScript is straightforward.</p>
+         <br>
+         <p><b>HTML code:</b></p>
+         <div id="code">   
+          &lt;img id=&quot;koala&quot; ondragstart=&quot;drag(event)&quot; height="200px" width="200px" src=&quot;../images/koala2.png&quot;&gt;<br><br>
+               &lt;div id=&quot;koala2&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;<br><br>
+               &lt;div id=&quot;koala2&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;<br>     
          </div>
+         <br>
+         <p><b>JavaScript code:</b></p>
+         <div id="code">
+         function allowDrop(ev) {<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+               }<br><br>
+
+               function drag(ev) {<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.dataTransfer.setData(&quot;text/html&quot;, ev.target.id);<br>
+               }<br><br>
+
+               function drop(ev) {<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var data = ev.dataTransfer.getData(&quot;text/html&quot;);<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));<br>
+         </div>
+         <br>
+         <p>Here you can drag and drop the result:</p>
+         <br>
+         <div style="float: left; width: 205px; height: 205px; border-style: dashed; border-color: black; border-width: 1px; ondrop: drop(event); ondragover: allowDrop(event); margin: 1px; padding: 10px" id="koala2" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="koala" ondragstart="drag(event)" height="200px" width="200px" src="../images/koala2.png"></div>
+         <div style="float: left; width: 205px; height: 205px; border-style: dashed; border-color: black; border-width: 1px; ondrop: drop(event); ondragover: allowDrop(event); margin: 1px; padding: 10px" id="koala2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+         <br>
+         <p style="float: left; margin-top: 10px">Pretty cool, right? This kind of thing is difficult to do in CSS and HTML on their own. This is a very simple example of JavaScript in action. For a more elaborate and complex example, consider this <a href="https://cs.wmich.edu/~jjm1588/pendulum/doublependulum.html">double pendulum</a>, which uses a canvas scripting variant of JavaScript called KineticJS.</p>
+         <br>
+
+         </div>   
          <!-- End Right Column -->
          
          <!-- Begin Footer -->

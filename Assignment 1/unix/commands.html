@@ -35,8 +35,8 @@
                   <ul>
                      <li><a href="../frontend/references.html">References</a></li>
                      <li><a href="../frontend/html5.html">HTML5</a></li>
-                     <li><a href="../frontend/html5.html">CSS3</a></li>
-                     <li><a href="../frontend/html5.html">JavaScript</a></li>
+                     <li><a href="../frontend/css3.html">CSS3</a></li>
+                     <li><a href="../frontend/javascript.html">JavaScript</a></li>
                   </ul>
                </li>
                <li><a href="./main.html">Unix Environment</a>
@@ -63,7 +63,7 @@
                      <li><a href="../ror/security.html">Security</a></li>
                   </ul>
                </li>
-               <li><a href="">Web Server</a>
+               <li><a href="http://vps.cs.wmich.edu:63680">Web Server</a>
                   <ul>
                      <li><a href="../ws/setup.html">Setup & Installation</a>
                      <li><a href="../ws/log.html">Activity Log</a></li>
@@ -84,31 +84,60 @@
                   <li><b>pwd</b>: this is the command to output to the terminal your current working directory.
                   <br><br>
                   <div id="code">
-                  <b>...:$ pwd<br>
+                  <b>...:~$ pwd<br>
                   /home/james<br>
-                  ...:$ <br><br></b>
+                  ...:~$ <br><br></b>
                   The absolute path to the current working directory is displayed on the next line.
                   </div></li><br>
                   <li><b>cd</b> <i>path</i>: where <b>cd</b> is the command for changing directories, and <i>path</i> is either the absolute or relative path of the intended directory.
                   <br><br>
                   <div id="code">
-                  <b>...:$ cd <i>CS3500</i><br>
-                  ...:/CS3500$ <br><br></b>
+                  <b>...:~$ cd <i>CS3500</i><br>
+                  ...:~/CS3500$ <br><br></b>
                   CS3500 is a folder directly below the current working directory. This is called a relative path.<br><br>
-                  <b>...$: cd <i>/home/james/Dropbox/CS3500</i><br>
-                  ...:/CS3500$ <br><br></b>
+                  <b>...:~$ cd <i>/home/james/Dropbox/CS3500</i><br>
+                  ...:/CS3500~$ <br><br></b>
                   This is an absolute path to the same folder. Supplying an absolute path allows the user to cd to any specified directory in the system, provided the user has the appropriate privileges.
                   </div></li><br>
                   <li><b>ls</b> <i>-l</i>: the <b>ls</b> command lists the files and sub-directories in the current working directory. There are a number of <b>tags</b> which can be supplied as arguments to <b>ls</b> which change the output. For example, <b>ls -l</b> lists the files in a longer form with permissions displayed. 
                   <br><br>
                   <div id="code">
-                  <b>...:$ ls<br>
+                  <b>...:~$ ls<br>
                   james  lost+found<br>
-                  ...:$ ls -l<br>
+                  ...:~$ ls -l<br>
                   drwxr-xr-x 40 james james  4096 Feb 15 10:56 james<br>
                   drwx------  2  root root  16384 Sep  5 21:02 lost+found<br><br></b>
                   The long argument gives much more information about the files or directories. 
                   </div></li><br>
+                  <li><b>ps</b> <i>-aux</i>: this is the command for displaying running processes and their process IDs. The <i>aux</i> argument actually consists of three separate flags. The <i>a</i> shows processes for all users, the <i>u</i> displays the process's user/owner and the <i>x</i> shows processes not attached to a terminal. 
+                  <br><br>
+                  <div id="code">
+                  <b>...:~$ ps -aux</b><br>
+                  USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND<br>
+                  root         1  0.0  0.0  33740  3124 ?        Ss   15:39   0:01 /sbin/init<br>
+                  root         2  0.0  0.0      0     0 ?        S    15:39   0:00 [kthreadd]<br>
+                  root         3  0.0  0.0      0     0 ?        S    15:39   0:00 [ksoftirqd/0]<br>
+                  [etc]
+                  </div></li><br>
+                  <li><b>kill</b> <i>-9 [pid]</i>: this command sends an uninterceptible (the <i>9</i> flag) kill signal, which, as you might have guessed, kills the process associated with the given <i>pid</i>.</li><br>
+                  <li><b>top</b>: this command line program monitors all processes in descending order of CPU usage. For example, here is a snapshot of <b>top</b> running on my system:<br><br>
+                  <div id="code">
+                  <b>top - 21:43:53 up  6:04,  2 users,  load average: 0.34, 0.38, 0.34<br>
+                  Tasks: 214 total,   2 running, 212 sleeping,   0 stopped,   0 zombie<br>
+                  %Cpu(s):  0.3 us,  0.8 sy,  0.0 ni, 98.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st<br>
+                  KiB Mem:   8098216 total,  3355932 used,  4742284 free,   162128 buffers<br>
+                  KiB Swap: 11718652 total,        0 used, 11718652 free.  1164956 cached Mem<br><br></b>
+
+                    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND  <br><br>                                                                                                                                
+                   1507 root      20   0  284816  95364  60000 S   2.0  1.2  11:04.89 Xorg      <br><br>                                                                                                                               
+                   3064 james     20   0  654992  22300  12508 S   1.3  0.3   0:02.77 gnome-terminal    <br><br>                                                                                                                       
+                   1732 james     20   0  364700   7548   2900 S   0.3  0.1   0:08.35 ibus-daemon    <br><br>                                                                                                                          
+                   2488 james     20   0 1032372 223252  50872 S   0.3  2.8   0:29.27 thunderbird   <br><br>                                                                                                                           
+                   5284 james     20   0   29244   1784   1180 R   0.3  0.0   0:00.09 top          <br><br>                                                                                                                            
+                      1 root      20   0   33740   3124   1476 S   0.0  0.0   0:01.10 init        <br><br>                                                                                                                             
+                      2 root      20   0       0      0      0 S   0.0  0.0   0:00.01 kthreadd   <br><br>
+                      </div> 
+               </ul>
          
          
          </div>
